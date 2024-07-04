@@ -1,0 +1,88 @@
+<DOCTYPE html>
+    <html>
+        <title>Block and Inline Elements</title>
+        <head>
+            <style>
+                address {
+                    display: block;
+                    font-style: italic;
+                }
+                canvas {
+                    height: 150px;
+                    width: 300px;
+                }
+            </style>
+            
+        </head>
+        <body>
+            <section>
+                <h2>Block Elements</h2> 
+                <!--A block-level element always starts on a new line, and the browsers automatically 
+                add some space (a margin) before and after the element.
+
+                A block-level element always takes up the full width available (stretches out to the left 
+                and right as far as it can).
+
+                List of Block level elements are:
+                    <address> <article> <aside> <blockquote> <canvas> <dd> <div> <dl> <dt>
+                    <fieldset> <figcaption> <figure> <footer> <form> <h1>-<h6> <header> <hr>
+                    <li> <main> <nav> <noscript> <ol> <p> <pre> <section> <table> <tfoot> <ul> <video>-->
+                
+                <!--The <address> tag defines the contact information for the author/owner of a document or an article.
+                The contact information can be an email address, URL, physical address, phone number, social media handle, etc.-->
+                <address>
+                    Written by <a href="mailto:sreenuthammisetty@icloud.com">Sreenu T</a>.<br>
+                    Visit us at:<br>
+                    Example.com<br>
+                    Box 564, Disneyland<br>
+                    USA
+                </address>
+
+                <!--The <blockquote> tag specifies a section that is quoted from another source.-->
+                <blockquote cite="https://www.bcguru.in/">
+                    For 50 years, WWF has been protecting the future of nature. 
+                    The world's leading conservation organization, WWF works in 100 countries and is supported 
+                    by 1.2 million members in the United States and close to 5 million globally.
+                </blockquote>
+
+                <!--The <canvas> tag is used to draw graphics, on the fly, via scripting (usually JavaScript).
+                The <canvas> tag is transparent, and is only a container for graphics, 
+                you must use a script to actually draw the graphics.
+                Any text inside the <canvas> element will be displayed in browsers with JavaScript disabled 
+                and in browsers that do not support <canvas>.-->
+                <canvas id="myCanvas">
+                    Your browser does not support the canvas tag.
+                    </canvas>
+                    
+                    <script>
+                    let c = document.getElementById("myCanvas");
+                    let ctx = c.getContext("2d");
+                    ctx.fillStyle = "red";
+                    ctx.fillRect(20, 20, 75, 50);
+                    //Turn transparency on
+                    ctx.globalAlpha = 0.2;
+                    ctx.fillStyle = "blue";
+                    ctx.fillRect(50, 50, 75, 50);
+                    ctx.fillStyle = "green";
+                    ctx.fillRect(80, 80, 75, 50);
+                    </script>
+
+                    <!--The <dd> tag is used to describe a term/name in a description list.
+                    The <dd> tag is used in conjunction with <dl> (defines a description list) and <dt> (defines terms/names).
+                    Inside a <dd> tag you can put paragraphs, line breaks, images, links, lists, etc.-->
+                        <dl>
+                            <dt>Coffee</dt>
+                            <dd>Black hot drink</dd>
+                            <dt>Milk</dt>
+                            <dd>White cold drink</dd>
+                        </dl>
+
+                    
+            </section>
+
+            <section>
+                <h2>Inline Elements</h2> 
+            
+            </section>
+        </body>
+    </html>
