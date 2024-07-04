@@ -1,0 +1,159 @@
+<html>
+    <!--The <header> element represents a container for introductory content or a set of navigational links.-->
+    <header>
+        <h1>What Does WWF Do?</h1>
+    </header>
+<head>
+<style>
+.all-browsers {
+    margin: 0;
+    padding: 5px;
+    background-color: lightgray;
+}
+
+.all-browsers > h1, .browser {
+    margin: 10px;
+    padding: 5px;
+}
+
+.browser {
+    background: white;
+}
+
+.browser > h2, p {
+    margin: 4px;
+    font-size: 90%;
+}
+
+aside {
+    width: 30%;
+    padding-left: 15px;
+    margin-left: 15px;
+    float: right;
+    font-style: italic;
+    background-color: lightgray;
+  }
+
+  details > summary {
+    padding: 4px;
+    width: 200px;
+    background-color: #eeeeee;
+    border: none;
+    box-shadow: 1px 1px 2px #bbbbbb;
+    cursor: pointer;
+  }
+  
+  details > p {
+    background-color: #eeeeee;
+    padding: 4px;
+    margin: 0;
+    box-shadow: 1px 1px 2px #bbbbbb;
+  }
+
+  main {
+    margin: 0;
+    padding: 5px;
+    background-color: lightgray;
+  }
+  
+  main > h1, p, .browser {
+    margin: 10px;
+    padding: 5px;
+  }
+  mark {
+    background-color: yellow;
+    color: black;
+  }
+</style>
+    <!--The <section> element defines section in a document.-->
+    <section>
+    <p>WWF's mission:</p>
+    <p>WWF's mission is to stop the degradation of our planet's natural environment,
+    and build a future in which humans live in harmony with nature.</p>
+    </section>
+</head>
+<body>
+
+   <!--The <main> tag specifies the main content of a document. Note: There must not be more than one <main> element in a document. 
+    The <main> element must NOT be a descendant of an <article>, <aside>, <footer>, <header>, or <nav> element.-->    
+<!--The <article> element specifies independent, self-contained content.-->
+    <main>
+        <h1>Most Popular Browsers</h1>
+        <p>Chrome, Firefox, and Edge are the most used browsers today.</p>
+<article class="all-browsers">
+    
+    <article class="browser">
+    <h2>Google Chrome</h2>
+    <p>Google Chrome is a web browser developed by Google, released in 2008. 
+        Chrome is the world's most popular web browser today!</p>
+    </article>
+    <article class="browser">
+    <h2>Mozilla Firefox</h2>
+    <p>Mozilla Firefox is an open-source web browser developed by Mozilla. 
+        Firefox has been the second most popular web browser since January, 2018.</p>
+    </article>
+    <article class="browser">
+    <h2>Microsoft Edge</h2>
+    <p>Microsoft Edge is a web browser developed by Microsoft, released in 2015. 
+        Microsoft Edge replaced Internet Explorer.</p>
+    </article>
+</article>
+</main>
+
+<!--The <aside> element defines some content aside from the content it is placed in (like a sidebar).-->
+    <p>My family and I visited The Epcot center this summer. The weather was nice, 
+        and Epcot was amazing! I had a great summer together with my family!</p>
+
+<aside>
+<p> Epcot center is a theme park at Walt Disney World Resort featuring exciting attractions, 
+    international pavilions, award-winning fireworks and seasonal special events.</p>
+</aside>
+
+<p>My family and I visited The Epcot center this summer. The weather was nice, and Epcot was amazing! 
+    I had a great summer together with my family!</p>
+<p>My family and I visited The Epcot center this summer. The weather was nice, and Epcot was amazing! 
+    I had a great summer together with my family!</p>
+
+<!--The <details> tag specifies additional details that the user can open and close on demand.
+
+The <details> tag is often used to create an interactive widget that the user can open and close. 
+    By default, the widget is closed. When open, it expands, and displays the content within.-->
+    <details>
+        <!--<summary>	Defines a visible heading for a <details> element-->
+        <summary>Epcot Center</summary>
+        <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, 
+            international pavilions, award-winning fireworks and seasonal special events.</p>
+      </details>
+      <!--<mark>	Defines marked/highlighted text-->
+        <p>Do not forget to buy <mark>milk</mark> today.</p>
+</body>
+
+<!--The <figure> tag specifies self-contained content, like illustrations, 
+    diagrams, photos, code listings, etc.
+
+The <figcaption> tag defines a caption for a <figure> element. 
+    The <figcaption> element can be placed as the first or as the last child of a <figure> element.-->
+        <figure>
+            <img src="pic_trulli.jpg" alt="Trulli" style="width:100%">
+            <figcaption>Fig.1 - Trulli, Puglia, Italy.</figcaption>
+          </figure>
+
+
+
+
+<!--The <nav> element defines a set of navigation links.-->
+    <nav>
+        <a href="/html/">HTML</a> |
+        <a href="/css/">CSS</a> |
+        <a href="/js/">JavaScript</a> |
+        <a href="/jquery/">jQuery</a>
+        </nav>
+
+
+
+    <!--The <footer> element defines a footer for a document or section.-->
+    <footer>
+    <p>Author: Hege Refsnes</p>
+    <p><a href="mailto:hege@example.com">hege@example.com</a></p>
+    </footer>
+</html>
