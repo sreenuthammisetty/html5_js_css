@@ -19,6 +19,16 @@
                   table, th, td {
                     border: 1px solid black;
                   }
+                  abbr {
+                    display: inline;
+                  }
+                  code {
+                    font-family: Consolas,"courier new";
+                    color: crimson;
+                    background-color: #f1f1f1;
+                    padding: 2px;
+                    font-size: 105%;
+                  }
             </style>
             
         </head>
@@ -247,7 +257,224 @@
 
             <section>
                 <h2>Inline Elements</h2> 
-            
+                <div>
+                    <!--The <a> tag defines a hyperlink, which is used to link from one page to another.
+                        The most important attribute of the <a> element is the href attribute, which indicates the link's destination. -->
+                        <a href="https://www.bcguru.in">Visit BCGURU.in!</a>
+                </div>
+                <div>
+                    <!-- The <abbr> tag defines an abbreviation or an acronym, like "HTML", "CSS", "Mr.", "Dr.", "ASAP", "ATM".-->
+                        <p><dfn><abbr title="Cascading Style Sheets">CSS</abbr>
+                            </dfn> is a language that describes the style of an HTML document.</p>
+                </div>
+                <div>
+                    <!-- The <b> tag specifies bold text without any extra importance.-->
+                    <p>This is normal text - <b>and this is bold text</b>.</p>
+                </div>
+                <div>
+                    <!--BDO stands for Bi-Directional Override.
+                        The <bdo> tag is used to override the current text direction. -->
+                            <p>This paragraph will go left-to-right.</p>
+                            <p><bdo dir="rtl">This paragraph will go right-to-left.</bdo></p>
+                </div>
+                <div>
+                    <!-- The <br> tag inserts a single line break.-->
+                    <p>To force<br> line breaks<br> in a text,<br> use the br<br> element.</p>
+                </div>
+                <div>
+                    <!-- The <button> tag defines a clickable button.-->
+                    <button type="button">Click Me!</button>
+                </div>
+                <div>
+                    <!--The <cite> tag defines the title of a creative work (e.g. a book, a poem, a song, a movie, a painting, a sculpture, etc.). -->
+                    <img src="img_the_scream.jpg" width="220" height="277" alt="The Scream">
+                    <p><cite>The Scream</cite> by Edward Munch. Painted in 1893.</p>
+                </div>
+                <div>
+                    <!-- The <code> tag is used to define a piece of computer code. The content inside is displayed in 
+                        the browser's default monospace font.-->
+                        <p>The HTML <code>button</code> tag defines a clickable button.</p>
+                        <p>The CSS <code>background-color</code> property defines the background color of an element.</p>
+                </div>
+                <div>
+                    <!-- The <dfn> tag stands for the "definition element", and it specifies a term that is going 
+                        to be defined within the content.
+                        The nearest parent of the <dfn> tag must also contain the definition/explanation for the term.-->
+                            <p><dfn title="HyperText Markup Language">HTML</dfn> is the standard markup language for creating web pages.</p>
+                </div>
+                <div>
+                    <!-- The <em> tag is used to define emphasized text. -->
+                        <p>You <em>have</em> to hurry up!</p>
+                        
+                        <p>We <em>cannot</em> live like this.</p>
+                </div>
+                <div>
+                    <!-- The <i> tag is often used to indicate a technical term, a phrase from another language, a thought, a ship name, etc.-->
+                        <p><i>Lorem ipsum</i> is the most popular filler text in history.</p>
+                        
+                        <p>The <i>RMS Titanic</i>, a luxury steamship, sank on April 15, 1912 after striking an iceberg.</p>
+                </div>
+                <div>
+                    <!-- The <img> tag is used to embed an image in an HTML page. src - Specifies the path to the image
+                    alt - Specifies an alternate text for the image, if the image for some reason cannot be displayed
+                    Note: Also, always specify the width and height of an image. If width and height are not specified, the page might
+                    flicker while the image loads.Tip: To link an image to another document, simply nest the <img> tag inside an <a> tag-->
+                        <h2>vertical-align: bottom</h2>
+                        <p>This is some text. <img src="smiley.gif" alt="Smiley face" width="42" height="42" style="vertical-align:bottom"> This
+                            is some text. This is some text. This is some text.</p>
+                        
+                        <h2>vertical-align: middle</h2>
+                        <p>This is some text. <img src="smiley.gif" alt="Smiley face" width="42" height="42" style="vertical-align:middle"> This
+                            is some text. This is some text. This is some text.</p>
+                        
+                        <h2>vertical-align: top</h2>
+                        <p>This is some text. <img src="smiley.gif" alt="Smiley face" width="42" height="42" style="vertical-align:top"> This is
+                            some text. This is some text. This is some text.</p>
+                        
+                        <h2>float: right</h2>
+                        <p>This is some text. <img src="smiley.gif" alt="Smiley face" width="42" height="42" style="float:right">This is some
+                            text. This is some text. This is some text.</p>
+                        
+                        <h2>float: left</h2>
+                        <p>This is some text. <img src="smiley.gif" alt="Smiley face" width="42" height="42" style="float:left">This is some
+                            text. This is some text. This is some text.</p>
+                </div>
+                <div>
+                    <!-- The <kbd> tag is used to define keyboard input. The content inside is displayed in the browser's default monospace font.-->
+                    <p>Press <kbd>Ctrl</kbd> + <kbd>C</kbd> to copy text (Windows).</p>
+                    
+                    <p>Press <kbd>Cmd</kbd> + <kbd>C</kbd> to copy text (Mac OS).</p>
+                </div>
+                <div>
+                    <!-- -->
+                    <p>Click on the computer, the phone, or the cup of coffee to go to a new page and read more about the topic:</p>
+                    
+                    <img src="workplace.jpg" alt="Workplace" usemap="#workmap" width="400" height="379">
+                    
+                    <map name="workmap">
+                        <area shape="rect" coords="34,44,270,350" alt="Computer" href="computer.htm">
+                        <area shape="rect" coords="290,172,333,250" alt="Phone" href="phone.htm">
+                        <area shape="circle" coords="337,300,44" alt="Cup of coffee" href="coffee.htm">
+                    </map>
+                </div>
+                <div>
+                    <!--The <object> tag defines a container for an external resource.
+                    The external resource can be a web page, a picture, a media player, or a plug-in application.To embed a picture, it is better to use the <img> tag.
+                    To embed HTML, it is better to use the <iframe> tag.
+                    To embed video or audio, it is better to use the <video> and <audio> tags.The <object> tag was originally designed to embed browser Plug-ins.
+                    Plug-ins are computer programs that extend the standard functionality of the browser. -->
+                    <object data="pic_trulli.jpg" width="300" height="200"></object>
+                    <object data="snippet.html" width="500" height="200">
+                    </object>
+                    <object data="movie.mp4" width="400" height="300"></object>
+                </div>
+                <div>
+                    <!--The <output> tag is used to represent the result of a calculation (like one performed by a script). -->
+                    <form oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+                        <input type="range" id="a" value="50">
+                        +<input type="number" id="b" value="25">
+                        =<output name="x" for="a b"></output>
+                    </form>
+                    
+                    <p><strong>Note:</strong> The output element is not supported in Edge 12 (or earlier).</p>
+                </div>
+                <div>
+                    <!-- The <q> tag defines a short quotation.Tip: Use <blockquote> for long quotations.-->
+                    <p>WWF's goal is to:
+                        <q>Build a future where people live in harmony with nature.</q>
+                        We hope they succeed.
+                    </p>
+                </div>
+                <div>
+                    <!-- The <samp> tag is used to define sample output from a computer program. 
+                        The content inside is displayed in the browser's default monospace font.-->
+                        <p>Message from my computer:</p>
+                        
+                        <p><samp>File not found.<br>Press F1 to continue</samp></p>
+                </div>
+                <div>
+                    <!--The <script> tag is used to embed a client-side script (JavaScript).
+                    The <script> element either contains scripting statements, or it points to an external script file 
+                        through the src attribute.Tip: Also look at the <noscript> element for users that have 
+                            disabled scripts in their browser, or have a browser that
+                    doesn't support client-side scripting.-->
+                    <p id="demo"></p>
+                    
+                    <script>
+                        document.getElementById("demo").innerHTML = "Hello JavaScript!";
+                    </script>
+                </div>
+                <div>
+                    <!-- The <select> element is used to create a drop-down list.-->
+                        <form action="/action_page.php">
+                            <label for="cars">Choose a car:</label>
+                            <select name="cars" id="cars">
+                                <optgroup label="Swedish Cars">
+                                    <option value="volvo">Volvo</option>
+                                    <option value="saab">Saab</option>
+                                </optgroup>
+                                <optgroup label="German Cars">
+                                    <option value="mercedes">Mercedes</option>
+                                    <option value="audi">Audi</option>
+                                </optgroup>
+                            </select>
+                            <br><br>
+                            <input type="submit" value="Submit">
+                        </form>
+                </div>
+                <div>
+                    <!--The <small> tag defines smaller text (like copyright and other side-comments). -->
+                        <p>This is some normal text.</p>
+                        <p><small>This is some smaller text.</small></p>
+                </div>
+                <div>
+                    <!-- The <span> tag is an inline container used to mark up a part of a text, or a part of a document.
+                    The <span> tag is easily styled by CSS or manipulated with JavaScript using the class or id attribute.
+                    The <span> tag is much like the <div> element, but <div> is a block-level element and <span> is an inline element.-->
+                    <p>My mother has <span style="color:blue;font-weight:bold">blue</span> eyes and my father has <span
+                            style="color:darkolivegreen;font-weight:bold">dark green</span> eyes.</p>
+                </div>
+                <div>
+                    <!--The <strong> tag is used to define text with strong importance. The content inside is typically displayed in bold.
+                    Tip: Use the <b> tag to specify bold text without any extra importance!-->
+                    <strong>This text is important!</strong>
+                </div>
+                <div>
+                    <!--The <sub> tag defines subscript text. Subscript text appears half a character below the normal line, 
+                        and is sometimes rendered in a smaller font. Subscript text can be used for chemical formulas, 
+                        like H2O.
+                        The <sup> tag defines superscript text. Superscript text appears half a character above the normal line, and is
+                            sometimes rendered in a smaller font. Superscript text can be used for footnotes, like WWW[1].-->
+                        <p>This text contains <sub>subscript</sub> text.</p>
+                        <p>This text contains <sup>superscript</sup> text.</p>
+                </div>
+                <div>
+                    <!--The <textarea> tag defines a multi-line text input control.-->
+                    <form action="/action_page.php">
+                        <p><label for="w3review">Review of W3Schools:</label></p>
+                        <textarea id="w3review" name="w3review" rows="4"
+                            cols="50">At w3schools.com you will learn how to make a website. They offer free tutorials in all web development technologies.</textarea>
+                        <br>
+                        <input type="submit" value="Submit">
+                    </form>
+                    
+                    <p>Click the "Submit" button and the form-data will be sent to a page on the
+                        server called "action_page.php".</p>
+                </div>
+                <div>
+                    <!--The <var> tag is used to defines a variable in programming or in a mathematical expression. The content inside is typically displayed in italic.-->
+                    <p>The area of a triangle is: 1/2 x <var>b</var> x <var>h</var>, where <var>b</var> is the base, and <var>h</var> is the
+                        vertical height.</p>
+                </div>
+                <div>
+                    <!---->
+                </div>
+                <div>
+                    <!---->
+                </div>
+                <div>
+                    <!---->
+                </div>
             </section>
         </body>
     </html>
