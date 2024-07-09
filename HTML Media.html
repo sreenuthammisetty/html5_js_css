@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Media</title>
+</head>
+<body>
+    <div>
+        <h2>The HTML <audio> Element</h2>
+        <!--The controls attribute adds audio controls, like play, pause, and volume.
+
+The <source> element allows you to specify alternative audio files which the browser may choose from. The browser will use the first recognized format.
+
+The text between the <audio> and </audio> tags will only be displayed in browsers that do not support the <audio> element. -->
+        <audio controls>
+            <source src="horse.ogg" type="audio/ogg">
+            <source src="horse.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+          </audio>
+    </div>
+    <div>
+        <h2>HTML <audio> Autoplay</h2>
+            <!--To start an audio file automatically, use the autoplay attribute -->
+            <audio controls autoplay>
+                <source src="horse.ogg" type="audio/ogg">
+                <source src="horse.mp3" type="audio/mpeg">
+              Your browser does not support the audio element.
+              </audio>
+        
+    </div>
+    <div>
+        <h2></h2>
+        <!--Add muted after autoplay to let your audio file start playing automatically (but muted) -->
+        <audio controls autoplay muted>
+            <source src="horse.ogg" type="audio/ogg">
+            <source src="horse.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+          </audio>
+    </div>
+    <div>
+        <h2>HTML Video</h2>
+        <!--The HTML <video> element is used to show a video on a web page.
+
+ -->
+        <video width="400" controls>
+           <source src="mov_bbb.mp4" type="video/mp4">
+           <source src="mov_bbb.ogg" type="video/ogg">
+           Your browser does not support HTML video.
+         </video>
+
+         <p>
+         Video courtesy of 
+         <a href="https://www.bigbuckbunny.org/" target="_blank">Big Buck Bunny</a>.
+         </p>
+    </div>
+    <div>
+        <h2>The HTML <video> Element</h2>
+        <!--To show a video in HTML, use the <video> element.
+            The controls attribute adds video controls, like play, pause, and volume.
+            It is a good idea to always include width and height attributes. If height and width are not set, the page might flicker while the video loads.
+            The <source> element allows you to specify alternative video files which the browser may choose from. The browser will use the first recognized format.
+            The text between the <video> and </video> tags will only be displayed in browsers that do not support the <video> element. -->
+            <video width="320" height="240" controls>
+                <source src="movie.mp4" type="video/mp4">
+                <source src="movie.ogg" type="video/ogg">
+                Your browser does not support the video tag.
+              </video>
+    </div>
+    <div>
+        <h2>HTML Autoplay</h2>
+        <!--To start a video automatically, use the autoplay attribute -->
+        <video width="320" height="240" autoplay>
+            <source src="movie (1).mp4" type="video/mp4">
+            <source src="movie.ogg" type="video/ogg">
+            Your browser does not support the video tag.
+          </video>
+    </div>
+    
+</body>
+</html>
