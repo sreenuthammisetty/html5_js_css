@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid Containers</title>
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            gap: 10px;
+            background-color: #2196F3;
+            padding: 10px;
+          }
+          
+          .grid-container > div {
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 1px solid black;
+            text-align: center;
+            font-size: 30px;
+          }
+
+          .grid-container2 {
+            display: grid;
+            justify-content: space-evenly;
+            grid-template-columns: 50px 50px 50px; /*Make the grid smaller than the container*/
+            gap: 10px;
+            background-color: #2196F3;
+            padding: 10px;
+          }
+          
+          .grid-container2 > div {
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            padding: 20px 0;
+            font-size: 30px;
+          }
+
+          .grid-container3 {
+            display: grid;
+            height: 400px;
+            align-content: center;
+            grid-template-columns: auto auto auto;
+            gap: 10px;
+            background-color: #2196F3;
+            padding: 10px;
+          }
+          
+          .grid-container3 > div {
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            padding: 20px 0;
+            font-size: 30px;
+          }
+    </style>
+</head>
+<body>
+    <h2>Grid Container</h2>
+    <p> To make an HTML element behave as a grid container, you have to set the display property to grid or inline-grid.<br>
+        Grid containers consist of grid items, placed inside columns and rows.</p>
+       
+        <h1>Grid Container</h1>
+
+        <p>A Grid Container consists of grid items arranged in columns and rows</p>
+        
+        <div class="grid-container">
+          <div>1</div>
+          <div>2</div>
+          <div>3</div>  
+          <div>4</div>
+          <div>5</div>
+          <div>6</div>
+          <div>7</div>
+          <div>8</div>
+        </div>
+        
+        <p>Direct child elements(s) of the grid container automatically becomes grid items.</p>
+
+        <p><h3>The grid-template-columns Property</h3>
+            The grid-template-columns property defines the number of columns in your grid layout, and it can define the width of each column.<br>
+            The value is a space-separated-list, where each value defines the width of the respective column.<br>
+            If you want your grid layout to contain 4 columns, specify the width of the 4 columns, or "auto" if all columns should have the same width.</p>
+            <p>The grid-template-columns property can also be used to specify the size (width) of the columns.</p>
+            <p><h3>The grid-template-rows Property</h3>
+                The grid-template-rows property defines the height of each row.<br>
+                The value is a space-separated-list, where each value defines the height of the respective row</p>
+                <p><h3>The justify-content Property</h3>
+                    The justify-content property is used to align the whole grid inside the container.</p>
+
+      
+
+        <p>Use the <em>justify-content</em> property to align the grid inside the container.</p>
+
+        <p>The value "space-evenly" will give the columns equal amount of space between, and around them:</p>
+
+        <div class="grid-container2">
+          <div>1</div>
+          <div>2</div>
+          <div>3</div>  
+          <div>4</div>
+          <div>5</div>
+          <div>6</div>  
+        </div>   
+        <div>
+            <p><h3>The align-content Property</h3>
+                The align-content property is used to vertically align the whole grid inside the container.</p>
+                
+
+            <p>Use the <em>align-content</em> property to vertically align the grid inside the container.</p>
+
+            <p>The value "center" will align the rows in the middle of the container:</p>
+
+            <div class="grid-container3">
+              <div>1</div>
+              <div>2</div>
+              <div>3</div>  
+              <div>4</div>
+              <div>5</div>
+              <div>6</div>  
+            </div>
+        </div>
+</body>
+</html>
