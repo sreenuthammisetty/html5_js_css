@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li {
+          display: inline;
+        }
+        span {
+            display: block;
+          }
+          h1.hidden {
+            display: none;        /*Removed from layout*/
+          }
+          h1.hidden2 {
+            visibility: hidden;   /*Still occupies space on the layout*/
+          }
+    </style>
+</head>
+<body>
+    <p>Display a list of links as a horizontal menu:</p>
+<div>
+<ul>
+  <li><a href="/html/default.asp" target="_blank">HTML</a></li>
+  <li><a href="/css/default.asp" target="_blank">CSS</a></li>
+  <li><a href="/js/default.asp" target="_blank">JavaScript</a></li>
+</ul>
+</div>
+<div>
+    <h1>Display span elements as block elements</h1>
+
+<span>A display property with</span> <span>a value of "block" results in</span> <span>a line break between each span elements.</span>
+</div>
+<div>
+    <h1>This is a visible heading</h1>
+<h1 class="hidden">This is a hidden heading</h1>
+<p>Notice that the h1 element with display: none; does not take up any space.</p>
+</div>
+<div>
+    <h1>This is a visible heading</h1>
+<h1 class="hidden2">This is a hidden heading</h1>
+<p>Notice that the hidden heading still takes up space.</p>
+
+</div>
+</body>
+</html>
