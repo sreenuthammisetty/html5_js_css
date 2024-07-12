@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selector Specificity</title>
+    <style>
+        p {color: blue;}
+        .test {color: green;} 
+        #demo {color: red;} 
+    </style>
+</head>
+<body>
+    <div>
+        <h1>What is Specificity?</h1>
+        <p>
+            If there are two or more CSS rules that point to the same element, the selector with the highest specificity value will "win", and its style declaration will be applied to that HTML element.
+            
+            Think of specificity as a score/rank that determines which style declaration is ultimately applied to an element.</p>
+    </div>
+    <div>
+        <h1>Specificity Hierarchy</h1>
+        <p>
+            Every CSS selector has its place in the specificity hierarchy.
+            
+            There are four categories which define the specificity level of a selector:
+            
+            Inline styles - Example: <h1 style="color: rgb(0, 9, 5);">
+            IDs - Example: #navbar
+            Classes, pseudo-classes, attribute selectors - Example: .test, :hover, [href]
+            Elements and pseudo-elements - Example: h1, ::before</p>
+    </div>
+    <div>
+        <h1>How to Calculate Specificity?</h1>
+        <p>
+            Memorize how to calculate specificity!
+            
+            Start at 0, add 100 for each ID value, add 10 for each class value (or pseudo-class or attribute selector), add 1 for each element selector or pseudo-element.
+            
+            Note: Inline style gets a specificity value of 1000, and is always given the highest priority!
+            
+            Note 2: There is one exception to this rule: if you use the !important rule, it will even override inline styles!</p>
+            <!--Selector	        Specificity Value	    Calculation
+                p	                        1	                1
+                p.test	                    11	                1 + 10
+                p#demo	                    101	                1 + 100
+                <p style="color: pink;">	1000                1000
+                #demo	                    100	                100
+                .test	                    10	                10
+                p.test1.test2	            21	                1 + 10 + 10
+                #navbar p#demo	            201	                100 + 1 + 100
+                *	                        0	                0 (the universal selector is ignored)-->
+        </div>
+        <div>
+            <p id="demo" class="test" style="color: pink;">Hello World!</p>
+        </div>
+    <div>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Box Sizing</title>
+    <style> 
+        .div1 {
+          width: 300px;
+          height: 100px;
+          border: 1px solid blue;
+        }
+        
+        .div2 {
+          width: 300px;
+          height: 100px;  
+          padding: 50px;
+          border: 1px solid red;
+        }
+        .div3 {
+            width: 300px;
+            height: 100px;
+            border: 1px solid blue;
+            box-sizing: border-box;             /*Box sizing property*/
+          }
+          
+          .div4 {
+            width: 300px;
+            height: 100px;  
+            padding: 50px;
+            border: 1px solid red;
+            box-sizing: border-box;
+          }
+          body {
+            margin: 0;
+          }
+          
+          * {
+            box-sizing: border-box;
+          } 
+          
+          input, textarea {
+            width: 100%;
+          }
+          div.container {
+            width: 100%;
+            border: 2px solid black;
+          }
+          
+          div.box {
+            box-sizing: border-box;
+            width: 50%;
+            border: 5px solid red;
+            float: left;
+          }
+          #example1 {
+            width: 300px;
+            padding: 40px;  
+            border: 15px solid blue;
+          }
+          
+          #example2 {
+            width: 300px;
+            padding: 10px;  
+            border: 2px solid red;
+          }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>CSS Box Sizing</h1>
+        <p>
+            The CSS box-sizing property allows us to include the padding and border in an element's total width and height.
+            Without the CSS box-sizing Property
+            By default, the width and height of an element is calculated like this:
+
+            width + padding + border = actual width of an element
+            height + padding + border = actual height of an element
+
+            This means: When you set the width/height of an element, the element often appears bigger than you have set (because the element's border and padding are added to the element's specified width/height).
+        </p>
+    <div>
+        <h1>Without box-sizing</h1>
+
+            <div class="div1">This div is smaller (width is 300px and height is 100px).</div>
+            <br>
+            <div class="div2">This div is bigger (width is also 300px and height is 100px).</div>
+    </div>
+    </div>
+    <div>
+        <h1>With the CSS box-sizing Property</h1>
+        <p>
+            The box-sizing property allows us to include the padding and border in an element's total width and height.
+            
+            If you set box-sizing: border-box; on an element, padding and border are included in the width and height:</p>
+    </div>
+    <div>
+        <h1>With box-sizing</h1>
+
+            <div class="div3">Both divs are the same size now!</div>
+            <br>
+            <div class="div4">Hooray!</div>
+    </div>
+
+    <div>
+        <form action="/action_page.php">
+            First name:<br>
+            <input type="text" name="firstname" value="Mickey"><br>
+            Last name:<br>
+            <input type="text" name="lastname" value="Mouse"><br>
+            Comments:<br>
+            <textarea name="message" rows="5" cols="30">
+            </textarea>
+            <br><br>
+            <input type="submit" value="Submit">
+          </form> 
+          
+          <p><strong>Tip:</strong> Try to remove the box-sizing property from the style element and look what happens.
+          Notice that the width of input, textarea, and submit button will go outside of the screen.</p>
+          
+    </div>
+    <div>
+        <div class="container">
+            <div class="box">This div occupies the left half</div>
+            <div class="box">This div occupies the right half</div>
+            <div style="clear:both;"></div>
+          </div>
+    </div>
+    <div>
+        <h1>The Universal box-sizing</h1>
+
+        <p>Since the result of using "box-sizing: border-box" is so much better, many developers want all elements on their pages to work this way.
+        The first style in the head section above ensures that all elements are sized in this more intuitive way.
+        The width you set is the width you get, without having to perform mental math and manage the complexity that comes from widths that come from multiple properties.
+        Applying this to all elements is safe and wise:</p>
+        
+        <div id="example1">This div has a full width of 300px, no matter padding or border!</div>
+        <br>
+        <div id="example2">This div also has a full width of 300px, no matter padding or border!</div>
+    </div>
+</body>
+</html>
