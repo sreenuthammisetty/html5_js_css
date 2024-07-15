@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Background Property</title>
+<style>
+    body { 
+        background: lightblue url("img_tree.gif") no-repeat fixed center; 
+      }
+      #example1 {
+        border: 10px solid black;
+        padding: 35px;
+        background: url(img_flwr.gif);
+        background-repeat: no-repeat;
+      }
+      
+      #example2 {
+        border: 10px solid black;
+        padding: 35px;
+        background: url(img_flwr.gif);
+        background-repeat: no-repeat;
+        background-origin: border-box;
+      }
+      
+      #example3 {
+        border: 10px solid black;
+        padding: 35px;
+        background: url(img_flwr.gif);
+        background-repeat: no-repeat;
+        background-origin: content-box;
+      }
+      #example4 {
+        border: 2px solid black;
+        padding: 25px;
+        background: url(mountain.jpg);
+        background-repeat: no-repeat;
+        background-size: auto;
+      }
+      
+      #example5 {
+        border: 2px solid black;
+        padding: 25px;
+        background: url(mountain.jpg);
+        background-repeat: no-repeat;
+        background-size: 300px 100px;
+      }
+      #example6 {
+        border: 2px solid black;
+        padding: 25px;
+        background: url("w3css.gif");
+        background-repeat: repeat;
+      }
+      
+      #example7 {
+        border: 2px solid black;
+        padding: 25px;
+        background: url("w3css.gif");
+        background-repeat: space;
+      }
+      
+      #example8 {
+        border: 1px solid black;
+        padding: 25px;
+        background: url("w3css.gif");
+        background-repeat: round;
+      }
+      #example9 {
+        border: 10px dashed black;
+        padding: 25px;
+        background: url(img_tree.gif), url(paper.gif);
+        background-repeat: no-repeat;
+        background-origin: content-box, padding-box;
+      }
+      
+      #example10 {
+        border: 10px dashed black;
+        padding: 25px;
+        background: url(img_tree.gif), url(paper.gif);
+        background-repeat: no-repeat;
+        background-origin: content-box, border-box;
+      }
+      
+      #example11 {
+        border: 10px dashed black;
+        padding: 25px;
+        background: url(img_tree.gif), url(paper.gif);
+        background-repeat: no-repeat;
+        background-origin: content-box, content-box;
+      }
+      #example12 {
+        border: 10px dotted black;
+        padding: 15px;
+        background: lightblue;
+        background-clip: border-box;  
+      }
+      
+      #example13 {
+        border: 10px dotted black;
+        padding: 15px;
+        background: lightblue;
+        background-clip: padding-box;
+      }
+      
+      #example14 {
+        border: 10px dotted black;
+        padding: 15px;
+        background: lightblue;
+        background-clip: content-box;
+      } 
+</style>
+</head>
+
+<body>
+    <h1>The background Property</h1>
+
+    <h2>CSS background-color</h2>
+<p>
+    The background-color property specifies the background color of an element.</p>
+<p>body {
+    background-color: lightblue;
+  }</p>
+<p>With CSS, a color is most often specified by:
+
+    a valid color name - like "red"
+    a HEX value - like "#ff0000"
+    an RGB value - like "rgb(255,0,0)"</p>
+    <h3>Opacity / Transparency</h3>
+<p>
+    The opacity property specifies the opacity/transparency of an element. It can take a value from 0.0 - 1.0. The lower value, the more transparent:</p>
+<p>div {
+    background-color: green;
+    opacity: 0.3;
+  }</p>
+  <h2>CSS Multiple Backgrounds</h2>
+<p>CSS allows you to add multiple background images for an element, through the background-image property.
+
+    The different background images are separated by commas, and the images are stacked on top of each other, where the first image is closest to the viewer.</p>
+<p>#example1 {
+    background-image: url(img_flwr.gif), url(paper.gif);
+    background-position: right bottom, left top;
+    background-repeat: no-repeat, repeat;
+  }</p>
+<p>#example1 {
+    background: url(img_flwr.gif) right bottom no-repeat, url(paper.gif) left top repeat;
+  }</p>
+  <h2>CSS Background Size</h2>
+<p>
+    The CSS background-size property allows you to specify the size of background images.
+    
+    The size can be specified in lengths, percentages, or by using one of the two keywords: contain or cover.</p>
+<p>#div1 {
+    background: url(img_flower.jpg);
+    background-size: 100px 80px;
+    background-repeat: no-repeat;
+  }</p>
+<p>#example1 {
+    background: url(img_tree.gif) left top no-repeat, url(img_flwr.gif) right bottom no-repeat, url(paper.gif) left top repeat;
+    background-size: 50px, 130px, auto;
+  }</p>
+<p>Full Size Background Image</p>
+<p>html {
+    background: url(img_man.jpg) no-repeat center fixed;
+    background-size: cover;
+  }</p>
+<div>
+    <h1>The background-origin Property</h1>
+
+<p>No background-origin (padding-box is default):</p>
+<div id="example1">
+  <h2>Lorem Ipsum Dolor</h2>
+  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+  <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<p>background-origin: border-box:</p>
+<div id="example2">
+  <h2>Lorem Ipsum Dolor</h2>
+  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+  <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<p>background-origin: content-box:</p>
+<div id="example3">
+  <h2>Lorem Ipsum Dolor</h2>
+  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+  <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+</div>
+</div>
+<h2>background-size: auto (default):</h2>
+
+    <div id="example4">
+      <h2>Hello World</h2>
+      <p>The background image is displayed in its original size.</p>
+    </div>
+    
+    <h2>background-size: 300px 100px:</h2>
+    <div id="example5">
+      <h2>Hello World</h2>
+      <p>Here, the background image is set to 300px wide and 100px high.</p>
+    </div>
+    
+<div>
+    <h2>background-repeat: repeat (default)</h2>
+<p>Here, the background image is repeated both vertically and horizontally. The last image will be clipped if it does not fit. This is default:</p>
+<div id="example6">
+  <h3>Hello World!</h3>
+</div>
+
+<h2>background-repeat: space</h2>
+<p>Here, the background-image is repeated as much as possible without clipping. The first and last images are pinned to either side of the element, and whitespace is distributed evenly between the images.</p>
+<div id="example7">
+  <h3>Hello World!</h3>
+</div>
+
+<h2>background-repeat: round</h2>
+<p>Here, the background-image is repeated and squished or stretched, to fill the space (no gaps):</p>
+<div id="example8">
+  <h3>Hello World!</h3>
+</div>
+</div>
+<div>
+    <h2>background-origin: content-box, padding-box:</h2>
+<div id="example9">
+  <h2>Hello World</h2>
+  <p>The "paper.gif" background image starts from the upper left corner of the padding edge.</p>
+  <p>The "img_tree.gif" background image starts from the upper left corner of the content.</p>
+</div>
+
+<h2>background-origin: content-box, border-box:</h2>
+<div id="example10">
+  <h2>Hello World</h2>
+  <p>The "paper.gif" background image starts from the upper left corner of the border.</p>
+  <p>The "img_tree.gif" background image starts from the upper left corner of the content.</p>
+</div>
+
+<h2>background-origin: content-box, content-box:</h2>
+<div id="example11">
+  <h2>Hello World</h2>
+  <p>Both background images starts from the upper left corner of the content.</p>
+</div>
+</div>
+<div>
+    
+<h1>The background-clip Property</h1>
+
+<p>The background-clip property defines how far the background should extend within an element.</p>
+
+<p>background-clip: border-box (this is default):</p>
+<div id="example12">
+  <p>The background extends behind the border.</p>
+</div>
+
+<p>background-clip: padding-box:</p>
+<div id="example13">
+  <p>The background extends to the inside edge of the border.</p>
+</div>
+
+<p>background-clip: content-box:</p>
+<div id="example14">
+  <p>The background extends to the edge of the content box.</p>
+</div>
+</div>
+<div>
+    <h1>CSS background-attachment Property</h1>
+    <p>The background-attachment property sets whether a background image scrolls with the rest of the page, or is fixed.</p>
+    <p>scroll	    The background image will scroll with the page. This is default<br>
+        fixed	    The background image will not scroll with the page<br>
+        local	    The background image will scroll with the element's contents<br>
+        initial	    Sets this property to its default value. Read about initial<br>
+        inherit	    Inherits this property from its parent element. Read about inherit</p>
+</div>
+</body>
+</html>
