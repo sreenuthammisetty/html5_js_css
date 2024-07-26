@@ -89,5 +89,31 @@
         <script src="myScript.js"></script>
     </div>
     <h1>JavaScript Output</h1>
+
+    <p id="demo9"></p>
+
+    <script>
+    document.getElementById("demo9").innerHTML = 5 + 6;
+    </script>
+
+    <script>
+        document.write(5 + 6);
+    </script>
+    <p></p>
+    <button type="button" onclick="document.write(5 + 6)">Try it</button>
+    <p></p>
+    <script>
+        window.alert('This is result of Window.alert(): '+ (5 + 6));
+    </script>
+    <p></p>
+    <script>
+        alert('This is result of alert(): '+ (5 + 6));
+    </script>
+    <p></p>
+    <script>
+        console.log('This is result of console.log(): '+ (5 + 6));
+    </script>
+    <p></p>
+    <button onclick="window.print()">Print this page</button>
 </body>
 </html>

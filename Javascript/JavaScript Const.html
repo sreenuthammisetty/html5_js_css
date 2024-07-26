@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        The const keyword was introduced in ES6 (2015) <br>
+
+        Variables defined with const cannot be Redeclared <br>
+
+        Variables defined with const cannot be Reassigned <br>
+
+        Variables defined with const have Block Scope
+    </div>
+    <h2>JavaScript const</h2>
+
+        <p id="demo"></p>
+
+        <script>
+        try {
+          const PI = 3.141592653589793;
+          PI = 3.14;
+        }
+        catch (err) {
+          document.getElementById("demo").innerHTML = err;
+        }
+        </script>
+
+        Must be Assigned <br>
+        JavaScript const variables must be assigned a value when they are declared: <br>
+
+        <div>
+            When to use JavaScript const? <br>
+        Always declare a variable with const when you know that the value should not be changed. <br>
+        
+        Use const when you declare: <br>
+        
+        A new Array <br>
+        A new Object <br>
+        A new Function <br>
+        A new RegExp <br>
+        </div>
+
+        <div>
+            Constant Objects and Arrays <br><br>
+        The keyword const is a little misleading. <br>
+        
+        It does not define a constant value. It defines a constant reference to a value. <br>
+        
+        Because of this you can NOT: <br><br>
+        
+        Reassign a constant value <br>
+        Reassign a constant array <br>
+        Reassign a constant object <br><br>
+        But you CAN: <br>
+        
+        Change the elements of constant array <br>
+        Change the properties of constant object <br><br>
+        </div>
+
+        <h2>JavaScript const</h2>
+
+        <p>Declaring a constant array does NOT make the elements unchangeable:</p>
+
+        <p id="demo1"></p>
+
+        <script>
+        // Create an Array:
+        const cars = ["Saab", "Volvo", "BMW"];
+        
+        // Change an element:
+        cars[0] = "Toyota";
+        
+        // Add an element:
+        cars.push("Audi");
+        
+        // Display the Array:
+        document.getElementById("demo1").innerHTML = cars; 
+        </script>
+
+        <p>You can NOT reassign a constant array:</p>
+
+        <p id="demo2"></p>
+
+        <script>
+        try {
+          const cars = ["Saab", "Volvo", "BMW"];
+          cars = ["Toyota", "Volvo", "Audi"];
+        }
+        catch (err) {
+          document.getElementById("demo2").innerHTML = err;
+        }
+        </script>
+
+        <h2>Constant Objects
+            </h2>
+            <p>You can change the properties of a constant object:</p>
+            <div>
+            <h2>JavaScript const</h2>
+
+            <p>Declaring a constant object does NOT make the objects properties unchangeable:</p>
+
+            <p id="demo3"></p>
+
+            <script>
+            // Create an object:
+            const car = {type:"Fiat", model:"500", color:"white"};
+            
+            // Change a property:
+            car.color = "red";
+            
+            // Add a property:
+            car.owner = "Johnson";
+            
+            // Display the property:
+            document.getElementById("demo3").innerHTML = "Car owner is " + car.owner; 
+            </script>
+            </div>
+            <div>
+                <p>You can NOT reassign a constant object:</p>
+
+            <p id="demo4"></p>
+
+            <script>
+            try {
+              const car = {type:"Fiat", model:"500", color:"white"};
+              car = {type:"Volvo", model:"EX60", color:"red"};
+            }
+            catch (err) {
+              document.getElementById("demo4").innerHTML = err;
+            }
+            </script>
+            </div>
+
+            <div>
+                Redeclaring an existing var or let variable to const, in the same scope, is not allowed:<br>
+                var x = 2;     // Allowed <br>
+                const x = 2;   // Not allowed <br>
+                             <br>
+                { <br>
+                let x = 2;     // Allowed <br>
+                const x = 2;   // Not allowed <br>
+                } <br>
+                 <br>
+                { <br>
+                const x = 2;   // Allowed <br>
+                const x = 2;   // Not allowed <br>
+                } <br>
+            </div>
+            <div>
+                Reassigning an existing const variable, in the same scope, is not allowed:                <br>
+ <br>
+                Example <br>
+                const x = 2;     // Allowed <br>
+                x = 2;           // Not allowed <br>
+                var x = 2;       // Not allowed <br>
+                let x = 2;       // Not allowed <br>
+                const x = 2;     // Not allowed <br>
+ <br>
+                { <br>
+                  const x = 2;   // Allowed <br>
+                  x = 2;         // Not allowed <br>
+                  var x = 2;     // Not allowed <br>
+                  let x = 2;     // Not allowed <br>
+                  const x = 2;   // Not allowed <br>
+                } <br>
+                Redeclaring a variable with const, in another scope, or in another block, is allowed: <br>
+ <br>
+                Example <br>
+                const x = 2;       // Allowed <br>
+ <br>
+                { <br>
+                  const x = 3;   // Allowed <br>
+                } <br>
+ <br>
+                { <br>
+                  const x = 4;   // Allowed <br>
+                } <br>
+ <br>
+            </div>
+</body>
+</html>
