@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Datatypes</title>
+</head>
+<body>
+    <div>
+        <p>
+            JavaScript has 8 Datatypes <br>
+                String <br>
+                Number <br>
+                Bigint <br>
+                Boolean <br>
+                Undefined <br>
+                Null <br>
+                Symbol <br>
+                Object <br>
+ <br>
+                The Object Datatype <br>
+                The object data type can contain both built-in objects, and user defined objects: <br>
+ <br>
+                Built-in object types can be: <br>
+ <br>
+                objects, arrays, dates, maps, sets, intarrays, floatarrays, promises, and more. <br>
+         </p>
+         <p>
+                            // Numbers:                                      <br>
+                let length = 16; <br>
+                let weight = 7.5; <br>
+                 <br>
+                // Strings: <br>
+                let color = "Yellow"; <br>
+                let lastName = "Johnson"; <br>
+                 <br>
+                // Booleans <br>
+                let x = true; <br>
+                let y = false; <br>
+                 <br>
+                // Object: <br>
+                const person = {firstName:"John", lastName:"Doe"}; <br>
+                 <br>
+                // Array object: <br>
+                const cars = ["Saab", "Volvo", "BMW"]; <br>
+                 <br>
+                // Date object: <br>
+                const date = new Date("2022-03-25"); <br>
+         </p>
+    </div>
+    <div>
+        <p>JavaScript evaluates expressions from left to right. Different sequences can produce different results:</p>
+
+        <p id="demo"></p>
+
+        <script>
+        let z = 16 + 4 + "Volvo";
+        document.getElementById("demo").innerHTML = z;
+        </script>
+    </div>
+    <div>
+        <p>JavaScript evaluates expressions from left to right. Different sequences can produce different results:</p>
+
+        <p id="demo2"></p>
+
+        <script>
+        let y = "Volvo" + 16 + 4;
+        document.getElementById("demo2").innerHTML = y;
+        </script>
+    </div>
+    <div>
+        <p>JavaScript has dynamic types. This means that the same variable can be used to hold different data types:</p>
+
+            <p id="demo3"></p>                           <br>
+ <br>
+            <script> 
+            let x;         // Now x is undefined 
+            x = 5;         // Now x is a Number 
+            x = "John";    // Now x is a String 
+             
+            document.getElementById("demo3").innerHTML = x;
+            </script>
+    </div>
+    <div>
+        <h2>JavaScript Strings</h2>
+
+            <p>Strings are written with quotes. You can use single or double quotes:</p>
+
+            <p id="demo4"></p>
+
+            <script>
+            let carName1 = "Volvo XC60";
+            let carName2 = 'Volvo XC60';
+            
+            document.getElementById("demo4").innerHTML =
+            carName1 + "<br>" + 
+            carName2; 
+            </script>
+
+    </div>
+    <div>
+        <h2>JavaScript Strings</h2>
+
+            <p>You can use quotes inside a string, as long as they don't match the quotes surrounding the string:</p>
+
+            <p id="demo5"></p>
+
+            <script>
+            let answer1 = "It's alright";
+            let answer2 = "He is called 'Johnny'";
+            let answer3 = 'He is called "Johnny"';
+            
+            document.getElementById("demo5").innerHTML =
+            answer1 + "<br>" + 
+            answer2 + "<br>" + 
+            answer3;
+            </script>
+    </div>
+    <div>
+        <h2>JavaScript Numbers</h2>
+
+        <p>Numbers can be written with, or without decimals:</p>
+
+        <p id="demo6"></p>
+
+        <script>
+        let x1 = 34.00;
+        let x2 = 34;
+        let x3 = 3.14;
+        
+        document.getElementById("demo6").innerHTML =
+        x1 + "<br>" + x2 + "<br>" + x3;
+        </script>
+    </div>
+    <div>
+        <h2>JavaScript Arrays</h2>
+
+        <p>Array indexes are zero-based, which means the first item is [0].</p>
+
+        <p id="demo7"></p>
+
+        <script>
+        const cars = ["Saab","Volvo","BMW"];
+        
+        document.getElementById("demo7").innerHTML = cars[0];
+        </script>
+    </div>
+    <div>
+        <h2>JavaScript Objects</h2>
+
+        <p id="demo8"></p>
+
+        <script>
+        const person = {
+          firstName : "John",
+          lastName  : "Doe",
+          age     : 50,
+          eyeColor  : "blue"
+        };
+
+        document.getElementById("demo8").innerHTML =
+        person.firstName + " is " + person.age + " years old.";
+        </script>
+    </div>
+    <div>
+        <h1>JavaScript Operators</h1>
+        <h2>The typeof Operator</h2>
+        <p>The typeof operator returns the type of a variable or an expression.</p>
+            
+        <p id="demo9"></p>
+            
+        <script>
+        document.getElementById("demo9").innerHTML = 
+        typeof "" + "<br>" +
+        typeof "John" + "<br>" + 
+        typeof "John Doe";
+        </script>
+    </div>
+    <div>
+        <p>The value (and the data type) of a variable with no value is <b>undefined</b>.</p>
+
+        <p id="demo10"></p>
+
+        <script>
+        let car;
+        document.getElementById("demo10").innerHTML =
+        car + "<br>" + typeof car;
+        </script>
+
+    </div>
+    <div>
+        <p>An empty string has both a legal value and a type:</p>
+
+        <p id="demo11"></p>
+
+        <script>
+        let car2 = "";
+        
+        document.getElementById("demo11").innerHTML =
+        "The value is: " + car2 + "<br>" + "The type is: " + typeof car2;
+        </script>
+    </div>
+</body>
+</html>
