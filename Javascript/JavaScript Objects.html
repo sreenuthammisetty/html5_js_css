@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Objects</title>
+</head>
+<body>
+    <h1>JavaScript Objects</h1>
+    <h2>Objects are Mutable</h2>
+
+    <p>Changes to a copy of an object will also change the original object:</p>
+
+    <p id="demo"></p>
+
+    <script>
+    // Create an Object
+    const person = {
+    firstName: "John",
+    lastName: "Doe",
+    age:50,
+    eyeColor: "blue"
+    };
+
+    // Create a Copy
+    const x = person;
+
+    // Change Age
+    x.age = 10;
+
+    document.getElementById("demo").innerHTML =
+    person.firstName + " is " + person.age + " years old.";
+    </script>
+    <div>
+        <h1>JavaScript Object Properties</h1>
+        <h2>Adding a new Property</h2>
+
+        <p id="demo2"></p>
+
+        <script>
+
+
+        person.nationality = "English";
+        document.getElementById("demo2").innerHTML =
+        person.firstname + " is " + person.nationality + ".";
+</script>
+    </div>
+    <div>
+        <h2>Deleting a Property</h2>
+
+        <p id="demo3"></p>
+
+        <script>
+        const person2 = {
+        firstname: "John",
+        lastname: "Doe",
+        age: 50,
+        eyecolor: "blue"
+        };
+
+        delete person2.age;
+
+        document.getElementById("demo3").innerHTML =
+        person2.firstname + " is " + person2.age + " years old.";
+        </script>
+
+    </div>
+    <div>
+        <h2>Accessing Nested Objects</h2>
+
+            <p id="demo4"></p>
+
+            <script>
+            // Create nested Objects
+            const myObj = {
+            name: "John",
+            age: 30,
+            myCars: {
+                car1: "Ford",
+                car2: "BMW",
+                car3: "Fiat"
+            }
+            }
+            document.getElementById("demo4").innerHTML = myObj.myCars.car2;
+            document.getElementById("demo4").innerHTML = myObj.myCars["car2"];
+            document.getElementById("demo4").innerHTML = myObj["myCars"]["car2"];    
+        </script>
+    </div>
+</body>
+</html>
