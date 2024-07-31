@@ -69,6 +69,8 @@
         <h2>Accessing Nested Objects</h2>
 
             <p id="demo4"></p>
+            <p id="demo5"></p>
+            <p id="demo6"></p>
 
             <script>
             // Create nested Objects
@@ -82,9 +84,112 @@
             }
             }
             document.getElementById("demo4").innerHTML = myObj.myCars.car2;
-            document.getElementById("demo4").innerHTML = myObj.myCars["car2"];
-            document.getElementById("demo4").innerHTML = myObj["myCars"]["car2"];    
+            document.getElementById("demo5").innerHTML = myObj.myCars["car2"];
+            document.getElementById("demo6").innerHTML = myObj["myCars"]["car2"];    
         </script>
+    </div>
+    <div>
+        <h2>Using Object.values()</h2>
+        <h3>Object.values() creates an array from the property values:</h3>
+        <p id="demo7"></p>
+         <!--Create an Object-->
+         <script>
+            const person3 = {
+              name: "John",
+              age: 30,
+              city: "New York"
+            };
+
+             
+            const myArray = Object.values(person3);
+
+            
+            document.getElementById("demo7").innerHTML = myArray;
+        </script>
+    </div>
+    <div>
+        <h1>JavaScript Objects</h1>
+        <h2>The Object.entries() Method</h2>
+        <p>Object.entries() makes it simple to use objects in loops:</p>
+
+        <p id="demo8"></p>
+
+        <script>
+        const fruits = {Bananas:300, Oranges:200, Apples:500}; 
+        
+        let text = "";
+        for (let [fruit, amount] of Object.entries(fruits)) {
+          text += fruit + ": " + amount + "<br>";
+        }
+
+        document.getElementById("demo8").innerHTML = text;
+        </script>
+    </div>
+    <div>
+        <h2>Display Properties with JSON</h2>
+
+        <p id="demo9"></p>
+            
+        <script>
+        // Create an Object
+        const person4 = {
+          name: "John",
+          age: 30,
+          city: "New York"
+        };
+        
+        // Display JSON
+        document.getElementById("demo9").innerHTML = JSON.stringify(person4);
+        </script>
+    </div>
+    <div>
+        <h1>JavaScript Object Constructors</h1>
+
+        <p id="demo10"></p>
+
+        <script>
+        // Constructor Function for Person objects
+        function Person(first, last, age, eye) {
+          this.firstName = first;
+          this.lastName = last;
+          this.age = age;
+          this.eyeColor = eye;
+        }
+
+        // Create a Person object
+        const myFather = new Person("John", "Doe", 50, "blue");
+
+        // Display age
+        document.getElementById("demo10").innerHTML =
+        "My father is " + myFather.age + "."; 
+        </script>
+
+    </div>
+    <div>
+        <h1>JavaScript Object Constructors</h1>
+
+        <p id="demo11"></p>
+
+        <script>
+        // Display the Type
+        document.getElementById("demo11").innerHTML =
+        "<p>The typeof new Object() is " + typeof new Object() + "</p>" +
+        "<p>The typeof new Array() is " + typeof new Array() + "</p>" +
+        "<p>The typeof new Map() is " + typeof new Map() + "</p>" +
+        "<p>The typeof new Set() is " + typeof new Set() + "</p>" +
+        "<p>The typeof new Date() is " + typeof new Date() + "</p>" +
+        "<p>The typeof new RegExp() is " + typeof new RegExp() + "</p>" +
+        "<p>The typeof new Function() is " + typeof new Function() + "</p>";
+        </script>
+    </div>
+    <div>
+        <h2>Use object literals {} instead of new Object().          <br> 
+ <br>
+            Use array literals [] instead of new Array(). <br>
+             <br>
+            Use pattern literals /()/ instead of new RegExp(). <br>
+             <br>
+            Use function expressions () {} instead of new Function(). <br></h2>
     </div>
 </body>
 </html>
