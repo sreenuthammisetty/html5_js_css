@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Events</title>
+</head>
+<body>
+    <div>
+        <h1>JavaScript HTML Events</h1>
+        <h2>The onclick Attribute</h2>
+
+        <button onclick="document.getElementById('demo').innerHTML=Date()">The time is?</button>
+        
+        <p id="demo"></p>
+    </div>
+    <div>
+        <button onclick="this.innerHTML=Date()">The time is?</button>
+    </div>
+    <div>
+        <p>Click the button to display the date.</p>
+        <button onclick="displayDate()">The time is?</button>
+
+        <script>
+        function displayDate() {
+          document.getElementById("demo1").innerHTML = Date();
+        }
+        </script>
+
+        <p id="demo1"></p>
+    </div>
+    <div>
+        <img src="JS Events.png"/>
+    </div>
+    <div>
+        <h1>JavaScript Strings</h1>
+
+        <p>The escape sequence \' inserts a single quote in a string.</p>
+
+        <p id="demo2"></p>
+        <p id="demo3"></p>
+        <p id="demo4"></p>
+
+        <script>
+        let text1 = 'It\'s alright.';
+        document.getElementById("demo2").innerHTML = text1; 
+
+        let text2 = "The character \\ is called backslash.";
+        document.getElementById("demo3").innerHTML = text2; 
+
+        let text3 = "We are the so-called \"Vikings\" from the north.";
+        document.getElementById("demo4").innerHTML = text3; 
+
+        </script>
+    </div>
+    <div>
+        <img src="escape sequences.png"/>
+    </div>
+    <div>
+        <h1>JavaScript Strings</h1>
+        <h2>The slice() Method</h2>
+
+        <p>The sliced (extracted) part of the string is:</p>
+        <p id="demo5"></p>
+        <p id="demo6"></p>
+
+        <script>
+        let text4 = "Apple, Banana, Kiwi";
+        let part = text4.slice(7,13);
+        document.getElementById("demo5").innerHTML = part; 
+        document.getElementById("demo6").innerHTML = text4.substring(7,13);
+        </script>
+    </div>
+    <div>
+        <p>Display the first array element, after a string split:</p>
+
+        <p id="demo7"></p>
+
+        <script>
+        let text5 = "a,b,c,d,e,f";
+        const myArray = text5.split(",");
+        document.getElementById("demo7").innerHTML = myArray[0];
+        </script>
+    </div>
+</body>
+</html>
